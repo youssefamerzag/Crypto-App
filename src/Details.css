@@ -1,18 +1,5 @@
 
-.coinDetails {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    border: solid 2px;
-    border-radius: 10px;
-    margin: 13px;
-    padding: 10px;
-    border: none;
-    transition : 0.2s;
-    justify-content: center;
-    margin-top: 50px;
-}
+
 .coin {
     width: 350px;
     padding: 20px;
@@ -47,21 +34,6 @@
 .coinPrice {
     font-size: 25px;
     color: rgb(0, 255, 0);
-}
-.backButton {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    width: 100px;
-    justify-content: center;
-    padding: 20px 50px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #ddbdd5;
-    background: #9f2042;
-    font-size: 15px;
-    transition : 0.5s;
-    font-weight: 500;
 }
 .backButton:hover {
     background-color: #d8345f;

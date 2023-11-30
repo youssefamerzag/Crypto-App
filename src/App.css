@@ -3,52 +3,9 @@ body {
     margin: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-
-  .title {
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    margin: 40px;
-    text-align: center;
-    font-weight: 700;
-  }
-
-  .news {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    
-  }
-  .new {
-    background-color: #564364;
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    margin: 13px;
-    padding: 10px;
-    transition: 0.2s;
-    width: 90%;
-  }
   .new:hover {
     box-shadow: #c6b0db 0px 0px 15px;
     transition: 0.2s;
-  }
-  .newTitle {
-    background-color: #a393bf;
-    margin-left: 10px;
-    width: 200px;
-    text-align: center;
-    border-radius: 50px;
-  }
-  .newButton {
-    margin-left: auto;
-    margin-right: 20px;
-    padding: 10px 30px;
-    border-radius: 50px;
-    text-decoration: none;
-    color: #ddbdd5;
-    background: linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1));
-    font-size: 15px;
-    transition: 0.5s;
   }
   .newImg {
     margin-right: 10px;
