@@ -26,29 +26,13 @@ const Coins = () => {
                 flexWrap : "wrap"
             }}>
                 {data.map((news , index) =>
-                    <div key={index} style={{
-                        backgroundColor : "#564364",
-                        display : "flex",
-                        alignItems : "center",
-                        borderRadius : "50px",
-                        margin : "13px",
-                        padding : "10px",
-                        transition : "0.2s",
-                        width : "90%"
-                    }} className="new">
+                    <div key={index}  className="new">
                         <img className="newImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${news.name}-cryptocurrency-black-fill-lafs.png`}/>
-                        <p style={{
-                            backgroundColor: "#a393bf",
-                            marginLeft: "10px",
-                            width: "200px",
-                            textAlign: "center",
-                            borderRadius: "50px",
-                            padding : "5px"
-                        }} className="newTitle" key={index}>{news.name}</p>
+                        <p className="newTitle" key={index}>{news.name}</p>
                         <p className="newPrice">${news.priceUsd}</p>
                         <Link style={{
                             marginLeft : "auto",
-                            marginRight : "20px",
+                            marginRight : "10px",
                             padding : "10px 30px",
                             textDecoration : "none",
                             borderRadius : "50px",
