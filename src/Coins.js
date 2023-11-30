@@ -9,6 +9,8 @@ const Coins = () => {
     axios.get('https://api.coincap.io/v2/assets')
         .then(response =>  setData(response.data.data) )
 
+    const [searchInp , setSearchInp] = useState('')
+
 
     return (
         <div className="coinsApp">
@@ -18,18 +20,27 @@ const Coins = () => {
                 margin : "40px",
                 textAlign : "center",
                 fontWeight : "700"
-                }}
-                >Cryptocurrency Prices by Market Cap</p>
-            <div className="news" style={{
+                }}>
+                    Cryptocurrency Prices by Market Cap
+                </p>
+                <div className="coinSearchDiv">
+                    <input className="coinSearch" onChange={(e) => setSearchInp(e.target.value)} placeholder="Search"/>
+                </div>
+            <div className="news" 
+            style={{
                 justifyContent : "center",
                 display : "flex",
                 flexWrap : "wrap"
             }}>
-                {data.map((news , index) =>
+                {data.filter(coin => {
+                    return searchInp.toLowerCase() === ''
+                    ? coin 
+                    : coin.name.toLowerCase().includes(searchInp);
+                }).map((coin , index) =>
                     <div key={index}  className="new">
-                        <img className="newImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${news.name}-cryptocurrency-black-fill-lafs.png`}/>
-                        <p className="newTitle" key={index}>{news.name}</p>
-                        <p className="newPrice">${news.priceUsd}</p>
+                        <img className="newImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${coin.name}-cryptocurrency-black-fill-lafs.png`}/>
+                        <p className="newTitle" key={index}>{coin.name}</p>
+                        <p className="newPrice">${coin.priceUsd}</p>
                         <Link style={{
                             marginLeft : "auto",
                             marginRight : "10px",
@@ -40,7 +51,7 @@ const Coins = () => {
                             background: "linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1))",
                             fontsize : "15px",
                             transition : "0.5s" 
-                        }} to={`/details/${news.id}/${news.name}/${news.priceUsd}/${news.rank}`} className="newButton">Learn More</Link>
+                        }} to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}`}className="newButton">Learn More</Link>
                     </div>
                 )}
         <p></p>

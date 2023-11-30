@@ -11,6 +11,25 @@ body {
     text-align: center;
   }
 
+  .coinSearchDiv {
+    display: flex;
+    justify-content: center;
+  }
+
+  .coinSearch {
+    justify-content: center;
+    display: flex;
+    padding-left: 30px;
+    width: 900px;
+    height: 50px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    background: linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1));
+    color : white;
+    border: 3px solid #564364;
+    font-size: 20px;
+  }
+
   .news {
     justify-content: center;
     display: flex;

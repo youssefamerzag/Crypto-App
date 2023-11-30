@@ -18,7 +18,7 @@ const Details = () => {
                     textDecoration: "none",
                     transition : "0.5s",
                     color : "#ddbdd5",
-                    background : "#9f2042",
+                    background: "linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1))",
                     fontSize : "15px",
                     transition : "0.5s",
                     fontWeight : "500"
