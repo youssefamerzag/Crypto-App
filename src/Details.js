@@ -5,7 +5,6 @@ const Details = () => {
     const {name} = useParams()
     const {rank} = useParams()
     const {priceUsd} = useParams()
-    const {explorer} = useParams()
     return(
     <div>
         <a className="backButton" href='/'>Back</a>
