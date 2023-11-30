@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+import { BrowserRouter , Link , Route , Routes } from "react-router-dom";
+import Details from "./Details";
+import Coins from "./Coins";
+const App = () => {
+
+ 
+  return(
+    <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Coins/>}/>
+          <Route path='/details/:id/:name/:priceUsd/:rank' element={<Details/>}/>
+        </Routes>
+    </BrowserRouter>
+
+  )
 }
-
-export default App;
+export default App; 

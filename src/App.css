@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+    background: linear-gradient(to right, #2c2138, rgba(0, 0, 0, 1));
+    margin: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .title {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    margin: 40px;
+    text-align: center;
+    font-weight: 700;
   }
-  to {
-    transform: rotate(360deg);
+
+  .news {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    
   }
-}
+  .new {
+    background-color: #564364;
+    display: flex;
+    align-items: center;
+    border-radius: 50px;
+    margin: 13px;
+    padding: 10px;
+    transition: 0.2s;
+    width: 90%;
+  }
+  .new:hover {
+    box-shadow: #c6b0db 0px 0px 15px;
+    transition: 0.2s;
+  }
+  .newTitle {
+    background-color: #a393bf;
+    margin-left: 10px;
+    width: 200px;
+    text-align: center;
+    border-radius: 50px;
+  }
+  .newButton {
+    margin-left: auto;
+    margin-right: 20px;
+    padding: 10px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #ddbdd5;
+    background: linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1));
+    font-size: 15px;
+    transition: 0.5s;
+  }
+  .newImg {
+    margin-right: 10px;
+    background-color: #c6b0db;
+    border-radius: 100px;
+  }
+  .newPrice {
+    margin-left: auto;
+    color: white;
+  }
+  .newButton:hover {
+    background: #9882ac;
+    color: #000000;
+    transition: 0.5s;
+    box-shadow: #9882ac 0px 0px 10px;
+  }
+  @media only screen and (max-width: 600px) {
+    .new {
+      display: block;
+      text-align: center;
+      padding: 30px;
+    }
+    .newTitle {
+      margin-left: 10px;
+      margin-right: 10px;
+      width: auto;
+    }
+    .newButton {
+      text-align: center;
+      align-items: center;
+      border: 1px solid;
+      padding: 10px 30px;
+      border-radius: 50px;
+      border: none;
+      transition: 0.5s;
+      margin: 10px;
+    }
+
+    .title {
+      font-size: 20px;
+    }
+  }
