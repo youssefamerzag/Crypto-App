@@ -35,7 +35,7 @@ const Coins = () => {
                 {data.filter(coin => {
                     return searchInp.toLowerCase() === ''
                     ? coin 
-                    : coin.name.toLowerCase().includes(searchInp);
+                    : coin.name.toLowerCase().includes(searchInp.toLowerCase());
                 }).map((coin , index) =>
                     <div key={index}  className="new">
                         <img className="newImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${coin.name}-cryptocurrency-black-fill-lafs.png`}/>
