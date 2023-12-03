@@ -1,10 +1,15 @@
 import { BrowserRouter, Link, useParams } from "react-router-dom";
 import './Details.css'
+import { useState } from "react";
 
 const Details = () => {
+    
     const {name} = useParams()
     const {rank} = useParams()
     const {priceUsd} = useParams()
+
+    const [coinValue , setCoinValue] = useState(0)
+    const [usdInp , setUsdInp] = useState(1)
     return(
     <div>
         <a style={{
@@ -13,12 +18,13 @@ const Details = () => {
                     flexWrap: "wrap",
                     width: "100px",
                     justifyContent : "center",
-                    padding: "20px 50px",
+                    padding: "15px 80px",
+                    margin : "10px",
                     borderRadius: "50px",
                     textDecoration: "none",
                     transition : "0.5s",
-                    color : "#ddbdd5",
-                    background: "linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1))",
+                    color : "white",
+                    background: "#ea698b",
                     fontSize : "15px",
                     transition : "0.5s",
                     fontWeight : "500"
@@ -45,9 +51,20 @@ const Details = () => {
                 </p>
             <p className="coin" >
             <p className="coinTitle">Price</p>
-                <p className="coinPrice">${priceUsd}</p>
+                <p className="coinPrice">${Number(priceUsd).toFixed(4)}</p>
             </p>
         </div>
+
+        <div className="Singlebuy">
+                    <div className="SinglebuyCard">
+                        <p className="SinglebuyTitle">Buy {name}</p>
+                        <p className="SinglebuySectionTitle">You pay</p>
+                            <input style={{color : "black"}} type="text" className="SinglepayInp" value={usdInp} onChange={(e) => setUsdInp(e.target.value)}></input>
+                        <p className="SinglebuySectionTitle">You get</p>
+                            <input style={{color : "black"}} className="SinglepayInp" value={usdInp / priceUsd}></input>
+                        <button className="SinglebuyButton">Buy and Instantly</button>
+                    </div>
+             </div>
     </div>
     )
 }

@@ -5,58 +5,105 @@ import {Link} from "react-router-dom";
 const Coins = () => {
 
     const [data , setData] = useState([])
-
+    const [searchInp , setSearchInp] = useState('')
     axios.get('https://api.coincap.io/v2/assets')
         .then(response =>  setData(response.data.data) )
 
-    const [searchInp , setSearchInp] = useState('')
-
-
+    const [coinValue , setCoinValue] = useState(0)
+    const [usdInp , setUsdInp] = useState(1)
+    
     return (
         <div className="coinsApp">
-            <p className="title" style={{
-                fontSize: "30px",
-                color : "white",
-                margin : "40px",
-                textAlign : "center",
-                fontWeight : "700"
-                }}>
-                    Cryptocurrency Prices by Market Cap
-                </p>
+            <header>
+                <p className="title" >Cryptocurrency <p style={{color :'white'}}>Prices by Market Cap</p></p>
+                <p className="paragraph">Excited to announce my latest project – a cryptocurrency website designed to offer users a seamless and secure experience for managing their digital assets. As a UIUX Designer, I was inspired to create a website that not only looks great but also provides users with a user-friendly interface and intuitive features.</p>
+                <button className="startedBtn" onClick={() => window.scrollTo({ top: 550, behavior: "smooth" })}>Get Started</button>
+                <img className="illustration" src="./imgs/crypto illustration.svg"></img>
+            </header>
+
+            {/* most Populer coins */}
+
+            <div className="mostPopuler">
+                <p style={{    textAlign: "center",fontSize : '30px' , color : "white" , fontWeight : '600' , margin : "30px"}}>Most Populer</p>
+                <div className="populerCoins">
+                {data.length > 0 && (
+                    <div className="populerCoin">
+                    <div className="populerTitleImg">
+                        <img className="populerImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${data[0].name}-cryptocurrency-black-fill-lafs.png`}/>
+                        <p className="populerTitle">{data[0].name}</p>
+                        </div>
+                        <p className="populerPrice">${Number(data[0].priceUsd).toFixed(4)}</p>
+                        <Link className="populerButton" to={`/details/${data[0].id}/${data[0].name}/${data[0].priceUsd}/${data[0].rank}`}>Learn More</Link>
+                    </div>
+                )}
+                {data.length > 1 && (
+                    <div className="populerCoin">
+                    <div className="populerTitleImg">
+                        <img className="populerImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${data[1].name}-cryptocurrency-black-fill-lafs.png`}/>
+                        <p className="populerTitle">{data[1].name}</p>
+                        </div>
+                        <p className="populerPrice">${Number(data[1].priceUsd).toFixed(4)}</p>
+                        <Link className="populerButton" to={`/details/${data[1].id}/${data[1].name}/${data[1].priceUsd}/${data[1].rank}`}>Learn More</Link>
+                    </div>
+                )}
+                {data.length > 2 && (
+                    <div className="populerCoin">
+                    <div className="populerTitleImg">
+                        <img className="populerImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${data[2].name}-cryptocurrency-black-fill-lafs.png`}/>
+                        <p className="populerTitle">{data[2].name}</p>
+                        </div>
+                        <p className="populerPrice">${Number(data[2].priceUsd).toFixed(4)}</p>
+                        <Link className="populerButton" to={`/details/${data[2].id}/${data[2].name}/${data[2].priceUsd}/${data[2].rank}`}>Learn More</Link>
+                    </div>
+                    )}
+                    </div>
+            </div>
+
+             {/* buy section */}
+
+             <div className="buySection">
+                <img src="./imgs/buy.png" className="buyImg"></img>
+                    <div className="buyCard">
+                        <p className="buyTitle">Buy cryptocurrency</p>
+                        <p className="buySectionTitle">You pay</p>
+                        <div className="coinchoosing">
+                            <select className="paySection">
+                                    <option className="buyOption">USD</option>
+                            </select>
+                            <input style={{color : "black"}} type="text" className="payInp" value={usdInp} onChange={(e) => setUsdInp(e.target.value)}></input>
+                        </div>
+                        <p className="buySectionTitle">You get</p>
+                    <div className="coinchoosing">
+                            <select className="paySection" onChange={(e) => setCoinValue(e.target.value)}>
+                                {data.map((coin , index) =>
+                                    <option className="buyOption" key={index} value={coin.priceUsd}>{coin.name}</option>
+                                )}
+                            </select>
+                            <input style={{color : "black"}} className="payInp" value={usdInp /coinValue}></input>
+                        </div>
+                        <button className="buyButton">Buy and Instantly</button>
+                    </div>
+             </div>
+             <div className="allCoins">
                 <div className="coinSearchDiv">
                     <input className="coinSearch" onChange={(e) => setSearchInp(e.target.value)} placeholder="Search"/>
                 </div>
-            <div className="news" 
-            style={{
-                justifyContent : "center",
-                display : "flex",
-                flexWrap : "wrap"
-            }}>
-                {data.filter(coin => {
-                    return searchInp.toLowerCase() === ''
-                    ? coin 
-                    : coin.name.toLowerCase().includes(searchInp.toLowerCase());
-                }).map((coin , index) =>
-                    <div key={index}  className="new">
-                        <img className="newImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${coin.name}-cryptocurrency-black-fill-lafs.png`}/>
-                        <p className="newTitle" key={index}>{coin.name}</p>
-                        <p className="newPrice">${coin.priceUsd}</p>
-                        <Link style={{
-                            marginLeft : "auto",
-                            marginRight : "10px",
-                            padding : "10px 30px",
-                            textDecoration : "none",
-                            borderRadius : "50px",
-                            color : "#ddbdd5",
-                            background: "linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1))",
-                            fontsize : "15px",
-                            transition : "0.5s" 
-                        }} to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}`}className="newButton">Learn More</Link>
-                    </div>
-                )}
-        <p></p>
+                <div className="news" >
+                    {data.filter(coin => {return searchInp.toLowerCase() === ''? coin : coin.name.toLowerCase().includes(searchInp.toLowerCase());
+                    }).map((coin , index) =>
+                        <div key={index}  className="new">
+                            <div className="newTitleImg">
+                            <img className="newImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${coin.name}-cryptocurrency-black-fill-lafs.png`}/>
+                            <p className="newTitle" key={index}>{coin.name}</p>
+                            </div>
+                            <p className="newPrice">${Number(coin.priceUsd).toFixed(4)}</p>
+                            <Link className="newButton" to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}`}>Learn More</Link>
+                        </div>
+                    )}
+            <p></p>
+            </div>
         </div>
-        </div>
+    </div>
     )
 }
 export default Coins;

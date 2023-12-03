@@ -1,14 +1,189 @@
+
+
 body {
-    background: linear-gradient(to right, #2c2138, rgba(0, 0, 0, 1));
+    background-color: #7209b7;
+    background-image: url(./imgs/back2.jpg);
+    background-size: 1500px;
     margin: 20px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
+  header {
+    margin: 120px;
+    margin-left: 150px;
+  }
+
+  .startedBtn {
+    background-color: #ea698b;
+    margin-top: 30px;
+    border-radius: 50px;
+    padding: 15px 30px;
+    color: white;
+  }
+
   .title {
-    font-size: 30px;
-    color: rgb(255, 255, 255);
+    font-size: 45px;
+    font-weight: 600;
+    color: #ea698b;
+  }
+
+  .paragraph {
+    margin-top: 10px;
+    width: 500px;
+    color: white;
+  }
+
+  .illustration {
+    width: 550px;
+    display: flex;
+    float: right;
+    margin-top: -370px;
+  }
+
+  .populerCoins {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px;
+  }
+
+  .populerCoin {
+    background: rgba(81, 150, 171, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
     margin: 40px;
+    padding: 30px 30px;
+    transition: 0.5s;
+    width: 300px;
+  }
+
+  .populerCoin:hover {
+    transform: scale(1.1);
+    transition: 0.5;
+  }
+
+
+  .populerCoin Link {
+    margin: 30px 10px;
+  }
+
+  .populerTitle {
+    margin-top: 30px;
+    margin-left: 10px;
+    margin-bottom: -50px;
+    color: white;
+  }
+
+  .populerTitleImg {
+    flex-direction: unset;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .populerImg {
+    background-color: white;
+    box-shadow: gray 0px 0px 5px;
+    border-radius: 18px;
+    margin: 10px;
+  }
+
+  .populerPrice {
+    margin: 30px 0px;
+    color: #70e000;
+    font-size: 20px;
     text-align: center;
+  }
+
+  .populerButton {
+    width: 100%;
+    background-color: #ea698b;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+  }
+
+
+  /*  buy section  */
+
+  .buySection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 70px 10px;
+  }
+
+  .buyCard {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 500px;
+    background-color: aqua;
+    padding: 40px;
+    margin: 50px;
+    background: rgba(81, 150, 171, 0.3);
+    color: white;
+    border-radius: 20px;
+  }
+
+  .buyImg {
+    width: 500px;
+    margin: 20px 50px 20px 10px;
+  }
+
+  .buyTitle {
+    font-size: 30px;
+    margin: -40px 0px 25px 0px;
+  }
+
+  .coinchoosing {
+    display: flex;
+  }
+
+  .payInp {
+    margin: 5px 10px 20px 0px;
+    padding: 10px 20px;
+    width: 340px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  .paySection {
+    margin: 5px 0px 20px 20px;
+    padding: 10px ;
+    width: 100px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background-color: #ea698b;
+    font-size: 15px;
+  }
+
+  .buyOption {
+    font-size: 10px;
+  }
+
+  .buySectionTitle {
+    margin-top: 25px;
+    font-size: 15px;
+    margin-left: 20px;
+  }
+
+  .buyButton {
+    background-color: #ea698b;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 45px;
+    margin-bottom: -50px;
+  }
+
+
+  .allCoins {
+    background-color: #b796ff;
+    border-top-right-radius: 50px ; 
+    border-top-left-radius: 50px ; 
   }
 
   .coinSearchDiv {
@@ -23,10 +198,7 @@ body {
     width: 900px;
     height: 50px;
     border-radius: 50px;
-    margin-bottom: 20px;
-    background: linear-gradient(103deg, rgba(40, 0, 89, 1), rgba(159, 32, 66, 1));
-    color : white;
-    border: 3px solid #564364;
+    margin: 50px 10px;
     font-size: 20px;
   }
 
@@ -36,54 +208,68 @@ body {
     flex-wrap: wrap;
   }
   .new {
-    background-color: #564364;
+    background: rgba(59, 30, 172, 0.7);
     display: flex;
-    align-items: center;
-    border-radius: 50px;
-    margin: 13px;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20px;
+    margin: 20px;
     padding: 10px;
     transition: 0.2s;
-    width: 90%;
-  }
+    width: 300px;
+}
+
+
   .new:hover {
     box-shadow: #c6b0db 0px 0px 15px;
     transition: 0.2s;
   }
+
   .newTitle {
-    background-color: #a393bf;
+    align-items: center;
+    margin-top: 28px;
     margin-left: 10px;
-    width: 200px;
-    text-align: center;
-    border-radius: 50px;
-    padding: 5px;
+    font-size: 18px;
+    color: white;
+  }
+
+  .newTitleImg {
+    flex-direction: unset;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .newImg {
-    margin-right: 10px;
     background-color: #c6b0db;
     border-radius: 100px;
+    margin: 10px;
+
   }
   .newPrice {
     margin-left: auto;
+    color: #70e000;
+    margin: 15px;
+    text-align: center;
+    font-size: 20px;
+  }
+
+  .newButton {
+    text-align: center;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #ea698b;
     color: white;
   }
+
   .newButton:hover {
     background: #9882ac;
     color: #000000;
     transition: 0.5s;
     box-shadow: #9882ac 0px 0px 10px;
   }
+  
   @media only screen and (max-width: 600px) {
-    .new {
-      display: block;
-      text-align: center;
-      padding: 30px;
-    }
-    .newTitle {
-      margin-left: 10px;
-      margin-right: 10px;
-      width: auto;
-    }
     .title {
       font-size: 20px;
     }
