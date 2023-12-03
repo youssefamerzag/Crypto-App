@@ -10,7 +10,7 @@ body {
 
   header {
     margin: 120px;
-    margin-left: 150px;
+    margin-left: 100px;
   }
 
   .startedBtn {
@@ -269,8 +269,100 @@ body {
     box-shadow: #9882ac 0px 0px 10px;
   }
   
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 1245px) {
+
     .title {
       font-size: 20px;
     }
+    header {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      text-align: center;
+    }
+
+    .illustration {
+      margin: auto;
+    }
+    
+  .title {
+    font-size: 30px;
+    margin: 20px;
+  }
+
+  .paragraph {
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+  }
+
+  .populerCoins {
+    margin: 20px;
+  }
+
+  .populerCoin {
+    margin: 20px;
+    padding: 40px 40px;
+  }
+
+  .buyImg {
+    margin: auto;
+    width: 400px;
+  }
+
+  .buyTitle {
+    font-size: 25px;
+  }
+
+  .buySection {
+    margin: 0px -30px;
+  }
+
+  .buyCard {
+    text-align: center;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .payInp {
+    margin: 5px 5px 20px 0px;
+    padding: 5px 10px;
+    width: 100%;
+  }
+
+  .paySection {
+    margin: 5px 0px 20px 10px;
+    padding: 10px ;
+  }
+
+  .buyOption {
+    font-size: 10px;
+  }
+
+  .buySectionTitle {
+    margin-top: 25px;
+    font-size: 15px;
+    margin-left: 0px;
+  }
+
+  .buyButton {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    margin-top: 45px;
+    margin-bottom: -50px;
+  }
+
+  .coinSearch {
+    justify-content: center;
+    display: flex;
+    padding-left: 30px;
+    width: 80%;
+    height: 50px;
+    margin: 10px;
+    border-radius: 50px;
+    margin: 50px 10px;
+    font-size: 15px;
+  }
+
   }

@@ -53,7 +53,6 @@
     display: flex;
     justify-content: center;
     margin: 30px;
-
 }
 
 .SinglebuyCard {
@@ -93,5 +92,38 @@
     .coinPrice {
         font-size: 18px;
         color: rgb(0, 255, 13);
+    }
+
+
+    .SinglebuyCard {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        color: white;
+        padding: 20px;
+    }
+
+    .SinglebuyTitle {
+        font-size: 25px;
+        margin: 10px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+    }
+
+    .SinglepayInp {
+        width: 100%;
+        margin: 5px;
+        padding-left: 10px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+        padding: 10px;
+    }
+
+    .SinglebuyButton {
+        padding: 10px;
+        margin: 20px 10px;
+        margin-left: 0px;
+        width: 100%;
     }
   }

@@ -15,8 +15,8 @@ const Coins = () => {
     return (
         <div className="coinsApp">
             <header>
-                <p className="title" >Cryptocurrency <p style={{color :'white'}}>Prices by Market Cap</p></p>
-                <p className="paragraph">Excited to announce my latest project – a cryptocurrency website designed to offer users a seamless and secure experience for managing their digital assets. As a UIUX Designer, I was inspired to create a website that not only looks great but also provides users with a user-friendly interface and intuitive features.</p>
+                <p className="title" >Track the Cryptocurrency <p style={{color :'white'}}>Market with Real-Time Data</p></p>
+                <p className="paragraph">Explore the top cryptocurrencies by market cap and stay informed with real-time price charts, historical data, and market analysis.</p>
                 <button className="startedBtn" onClick={() => window.scrollTo({ top: 550, behavior: "smooth" })}>Get Started</button>
                 <img className="illustration" src="./imgs/crypto illustration.svg"></img>
             </header>
