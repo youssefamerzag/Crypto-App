@@ -17,7 +17,7 @@ body {
     background-color: #ea698b;
     margin-top: 30px;
     border-radius: 50px;
-    padding: 15px 30px;
+    padding: 20px 60px;
     color: white;
   }
 
@@ -208,7 +208,8 @@ body {
     flex-wrap: wrap;
   }
   .new {
-    background: rgba(59, 30, 172, 0.7);
+    background-image: url('imgs/back2.jpg');
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -270,10 +271,6 @@ body {
   }
   
   @media only screen and (max-width: 1245px) {
-
-    .title {
-      font-size: 20px;
-    }
     header {
       display: flex;
       flex-direction: column;
@@ -286,14 +283,20 @@ body {
     }
     
   .title {
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px;
   }
 
   .paragraph {
     margin-top: 10px;
-    width: 100%;
-    color: white;
+    width: auto;
+    margin: 10px;
+    color: rgb(172, 172, 172);
+  }
+
+  .startedBtn {
+    width: auto;
+    margin: 50px 50px;
   }
 
   .populerCoins {
@@ -311,7 +314,7 @@ body {
   }
 
   .buyTitle {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .buySection {

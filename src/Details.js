@@ -1,4 +1,5 @@
 import { BrowserRouter, Link, useParams } from "react-router-dom";
+import axios from "axios";
 import './Details.css'
 import { useState } from "react";
 
@@ -8,8 +9,11 @@ const Details = () => {
     const {rank} = useParams()
     const {priceUsd} = useParams()
 
-    const [coinValue , setCoinValue] = useState(0)
     const [usdInp , setUsdInp] = useState(1)
+    const [data , setData] = useState([])
+
+    axios.get('https://api.coincap.io/v2/assets')
+        .then(Response => setData(Response.data.data))
     return(
     <div>
         <a style={{
@@ -64,7 +68,34 @@ const Details = () => {
                             <input style={{color : "black"}} className="SinglepayInp" value={usdInp / priceUsd}></input>
                         <button className="SinglebuyButton">Buy and Instantly</button>
                     </div>
-             </div>
+        </div>
+       
+        <div className="TopCoins">
+        {data.length > 0 &&
+            <div className="TopCoincard1">
+                <p className="TopTitle">{data[0].name}</p>
+                <p className="TopRank">#{data[0].rank}</p>
+                <p className="TopPrice">${Number(data[0].priceUsd).toFixed(3)}</p>
+                <p className="TopChange">{Number(data[0].changePercent24Hr).toFixed(2)}%</p>
+            </div>
+            }
+            {data.length > 0 &&
+            <div className="TopCoincard2">
+                <p className="TopTitle">{data[1].name}</p>
+                <p className="TopRank">#{data[1].rank}</p>
+                <p className="TopPrice">${Number(data[1].priceUsd).toFixed(3)}</p>
+                <p className="TopChange">{Number(data[1].changePercent24Hr).toFixed(2)}%</p>
+            </div>
+            }
+            {data.length > 0 &&
+            <div className="TopCoincard3">
+                <p className="TopTitle">{data[2].name}</p>
+                <p className="TopRank">#{data[2].rank}</p>
+                <p className="TopPrice">${Number(data[2].priceUsd).toFixed(3)}</p>
+                <p className="TopChange">{Number(data[2].changePercent24Hr).toFixed(2)}%</p>
+            </div>
+            }
+        </div>
     </div>
     )
 }

@@ -1,6 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import {Link} from "react-router-dom";
+import Details from "./Details";
 
 const Coins = () => {
 
@@ -25,44 +26,38 @@ const Coins = () => {
 
             <div className="mostPopuler">
                 <p style={{    textAlign: "center",fontSize : '30px' , color : "white" , fontWeight : '600' , margin : "30px"}}>Most Populer</p>
-                <div className="populerCoins">
-                {data.length > 0 && (
-                    <div className="populerCoin">
-                    <div className="populerTitleImg">
-                        <img className="populerImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${data[0].name}-cryptocurrency-black-fill-lafs.png`}/>
-                        <p className="populerTitle">{data[0].name}</p>
-                        </div>
-                        <p className="populerPrice">${Number(data[0].priceUsd).toFixed(4)}</p>
-                        <Link className="populerButton" to={`/details/${data[0].id}/${data[0].name}/${data[0].priceUsd}/${data[0].rank}`}>Learn More</Link>
-                    </div>
-                )}
-                {data.length > 1 && (
-                    <div className="populerCoin">
-                    <div className="populerTitleImg">
-                        <img className="populerImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${data[1].name}-cryptocurrency-black-fill-lafs.png`}/>
-                        <p className="populerTitle">{data[1].name}</p>
-                        </div>
-                        <p className="populerPrice">${Number(data[1].priceUsd).toFixed(4)}</p>
-                        <Link className="populerButton" to={`/details/${data[1].id}/${data[1].name}/${data[1].priceUsd}/${data[1].rank}`}>Learn More</Link>
-                    </div>
-                )}
-                {data.length > 2 && (
-                    <div className="populerCoin">
-                    <div className="populerTitleImg">
-                        <img className="populerImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${data[2].name}-cryptocurrency-black-fill-lafs.png`}/>
-                        <p className="populerTitle">{data[2].name}</p>
-                        </div>
-                        <p className="populerPrice">${Number(data[2].priceUsd).toFixed(4)}</p>
-                        <Link className="populerButton" to={`/details/${data[2].id}/${data[2].name}/${data[2].priceUsd}/${data[2].rank}`}>Learn More</Link>
-                    </div>
-                    )}
-                    </div>
+                <div className="TopCoins">
+        {data.length > 0 &&
+            <div className="TopCoincard1">
+                <p className="TopTitle">{data[0].name}</p>
+                <p className="TopRank">#{data[0].rank}</p>
+                <p className="TopPrice">${Number(data[0].priceUsd).toFixed(3)}</p>
+                <p className="TopChange">{Number(data[0].changePercent24Hr).toFixed(2)}%</p>
+            </div>
+            }
+            {data.length > 0 &&
+            <div className="TopCoincard2">
+                <p className="TopTitle">{data[1].name}</p>
+                <p className="TopRank">#{data[1].rank}</p>
+                <p className="TopPrice">${Number(data[1].priceUsd).toFixed(3)}</p>
+                <p className="TopChange">{Number(data[1].changePercent24Hr).toFixed(2)}%</p>
+            </div>
+            }
+            {data.length > 0 &&
+            <div className="TopCoincard3">
+                <p className="TopTitle">{data[2].name}</p>
+                <p className="TopRank">#{data[2].rank}</p>
+                <p className="TopPrice">${Number(data[2].priceUsd).toFixed(3)}</p>
+                <p className="TopChange">{Number(data[2].changePercent24Hr).toFixed(2)}%</p>
+            </div>
+            }
+        </div>
             </div>
 
              {/* buy section */}
 
              <div className="buySection">
-                <img src="./imgs/buy.png" className="buyImg"></img>
+                <img src="./imgs/wallet.png" className="buyImg"></img>
                     <div className="buyCard">
                         <p className="buyTitle">Buy cryptocurrency</p>
                         <p className="buySectionTitle">You pay</p>
@@ -98,6 +93,7 @@ const Coins = () => {
                             </div>
                             <p className="newPrice">${Number(coin.priceUsd).toFixed(4)}</p>
                             <Link className="newButton" to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}`}>Learn More</Link>
+
                         </div>
                     )}
             <p></p>

@@ -88,6 +88,66 @@
     padding: 10px;
 }
 
+
+.TopCoins {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.TopCoincard1 {
+    width: 400px;
+    height: 200px;
+    padding: 20px 20px;
+    margin: 10px;
+    background-image: url('imgs/btc.jpg');
+    border-radius: 20px;
+    color: white;
+}
+
+.TopCoincard2 {
+    width: 400px;
+    height: 200px;
+    padding: 20px 20px;
+    margin: 10px;
+    background-image: url('imgs/eth.jpg');
+    border-radius: 20px;
+    color: white;
+}
+
+.TopCoincard3 {
+    width: 400px;
+    height: 200px;
+    padding: 20px 20px;
+    margin: 10px;
+    background-image: url('imgs/Tether.jpg');
+    background-size: cover;
+    border-radius: 20px;
+    color: white;
+}
+
+.TopTitle {
+    font-size: 40px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.TopRank {
+    font-size: 15px;
+    color: black;
+}
+
+.TopPrice {
+    color: rgb(0, 255, 13);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.TopChange {
+}
+
 @media only screen and (max-width: 700px) {
     .coinPrice {
         font-size: 18px;
