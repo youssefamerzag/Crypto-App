@@ -52,7 +52,7 @@
 .Singlebuy {
     display: flex;
     justify-content: center;
-    margin: 30px;
+    margin: 50px;
 }
 
 .SinglebuyCard {
@@ -93,19 +93,27 @@
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
 }
 
 .TopCoincard1 {
     width: 400px;
     height: 200px;
-    padding: 20px 20px;
+    padding: 20px;
     margin: 10px;
     background-image: url('imgs/btc.jpg');
+    background-size: 400px;
+    transition:0.5s;
     border-radius: 20px;
     color: white;
 }
+
+.TopCoincard1:hover {
+    background-size: 420px;
+}
+
+
 
 .TopCoincard2 {
     width: 400px;
@@ -113,8 +121,14 @@
     padding: 20px 20px;
     margin: 10px;
     background-image: url('imgs/eth.jpg');
+    background-size: 400px;
+    transition:0.5s;
     border-radius: 20px;
     color: white;
+}
+
+.TopCoincard2:hover {
+    background-size: 420px;
 }
 
 .TopCoincard3 {
@@ -123,9 +137,14 @@
     padding: 20px 20px;
     margin: 10px;
     background-image: url('imgs/Tether.jpg');
-    background-size: cover;
+    background-size: 400px;
+    transition:0.5s;
     border-radius: 20px;
     color: white;
+}
+
+.TopCoincard3:hover {
+    background-size: 420px;
 }
 
 .TopTitle {

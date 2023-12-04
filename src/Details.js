@@ -69,7 +69,7 @@ const Details = () => {
                         <button className="SinglebuyButton">Buy and Instantly</button>
                     </div>
         </div>
-       
+        <p style={{    textAlign: "center",fontSize : '30px' , color : "white" , fontWeight : '600' , margin : "30px"}}>Most Populer</p>
         <div className="TopCoins">
         {data.length > 0 &&
             <div className="TopCoincard1">

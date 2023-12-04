@@ -37,7 +37,7 @@ body {
     width: 550px;
     display: flex;
     float: right;
-    margin-top: -370px;
+    margin-top: -350px;
   }
 
   .populerCoins {
@@ -209,22 +209,16 @@ body {
   }
   .new {
     background-image: url('imgs/back2.jpg');
-    background-size: cover;
+    background-size: 400px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 20px;
     margin: 20px;
     padding: 10px;
-    transition: 0.2s;
     width: 300px;
 }
 
-
-  .new:hover {
-    box-shadow: #c6b0db 0px 0px 15px;
-    transition: 0.2s;
-  }
 
   .newTitle {
     align-items: center;
@@ -249,9 +243,16 @@ body {
   .newPrice {
     margin-left: auto;
     color: #70e000;
-    margin: 15px;
+    margin: 10px 15px;
     text-align: center;
     font-size: 20px;
+  }
+  .newChange {
+    margin-left: auto;
+    color: white;
+    margin: 0px 15px 10px 15px;
+    text-align: center;
+    font-size: 15px;
   }
 
   .newButton {

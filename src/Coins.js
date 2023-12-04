@@ -65,7 +65,7 @@ const Coins = () => {
                             <select className="paySection">
                                     <option className="buyOption">USD</option>
                             </select>
-                            <input style={{color : "black"}} type="text" className="payInp" value={usdInp} onChange={(e) => setUsdInp(e.target.value)}></input>
+                            <input style={{color : "black"}} type="number" className="payInp" value={usdInp} onChange={(e) => setUsdInp(e.target.value)}></input>
                         </div>
                         <p className="buySectionTitle">You get</p>
                     <div className="coinchoosing">
@@ -74,7 +74,7 @@ const Coins = () => {
                                     <option className="buyOption" key={index} value={coin.priceUsd}>{coin.name}</option>
                                 )}
                             </select>
-                            <input style={{color : "black"}} className="payInp" value={usdInp /coinValue}></input>
+                            <input type="number" style={{color : "black"}} className="payInp" value={usdInp /coinValue}></input>
                         </div>
                         <button className="buyButton">Buy and Instantly</button>
                     </div>
@@ -92,6 +92,7 @@ const Coins = () => {
                             <p className="newTitle" key={index}>{coin.name}</p>
                             </div>
                             <p className="newPrice">${Number(coin.priceUsd).toFixed(4)}</p>
+                            <p className="newChange">{Number(coin.changePercent24Hr).toFixed(2)}%</p>
                             <Link className="newButton" to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}`}>Learn More</Link>
 
                         </div>
