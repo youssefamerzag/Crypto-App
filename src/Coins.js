@@ -21,7 +21,7 @@ const Coins = () => {
                 <p className="title" >Track the Cryptocurrency <p style={{color :'white'}}>Market with Real-Time Data</p></p>
                 <p className="paragraph">Explore the top cryptocurrencies by market cap and stay informed with real-time price charts, historical data, and market analysis.</p>
                 <button className="startedBtn" onClick={() => window.scrollTo({ top: 550, behavior: "smooth" })}>Get Started</button>
-                <img className="illustration" src="./imgs/crypto illustration.svg"></img>
+                <img className="illustration" src="./imgs/crypto illustration v2.svg"></img>
             </header>
 
             {/* most Populer coins */}
@@ -58,7 +58,7 @@ const Coins = () => {
              {/* buy section */}
 
              <div className="buySection">
-                <img src="./imgs/wallet.png" className="buyImg"></img>
+                <img src="./imgs/wallet.svg" className="buyImg"></img>
                     <div className="buyCard">
                         <p className="buyTitle">Buy cryptocurrency</p>
                         <p className="buySectionTitle">You pay</p>
