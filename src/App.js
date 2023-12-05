@@ -10,7 +10,7 @@ const App = () => {
     <div>
         <Routes>
           <Route path={process.env.PUBLIC_URL} element={<Coins/>}></Route>
-          <Route path='/details/:id/:name/:priceUsd/:rank' element={<Details/>}>
+          <Route path='/details/:id/:name/:priceUsd/:rank/:changePercent24Hr' element={<Details/>}>
         </Route>
         </Routes>
     </div>

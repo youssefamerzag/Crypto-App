@@ -14,7 +14,7 @@ body {
   }
 
   .startedBtn {
-    background-color: #ea698b;
+    background-color: rgb(189, 83, 83);
     margin-top: 30px;
     border-radius: 50px;
     padding: 20px 60px;
@@ -24,7 +24,7 @@ body {
   .title {
     font-size: 45px;
     font-weight: 600;
-    color: #ea698b;
+    color: rgb(189, 83, 83);
   }
 
   .paragraph {
@@ -98,7 +98,7 @@ body {
 
   .populerButton {
     width: 100%;
-    background-color: #ea698b;
+    background-color: rgb(189, 83, 83);
     text-align: center;
     padding: 10px;
     border-radius: 10px;
@@ -157,7 +157,7 @@ body {
     width: 100px;
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
-    background-color: #ea698b;
+    background-color: rgb(189, 83, 83);
     font-size: 15px;
   }
 
@@ -172,7 +172,7 @@ body {
   }
 
   .buyButton {
-    background-color: #ea698b;
+    background-color: rgb(189, 83, 83);
     padding: 15px;
     border-radius: 10px;
     margin-top: 45px;
@@ -260,7 +260,7 @@ body {
     padding: 10px 20px;
     margin: 5px;
     border-radius: 10px;
-    background-color: #ea698b;
+    background-color: rgb(189, 83, 83);
     color: white;
   }
 
@@ -368,5 +368,32 @@ body {
     margin: 50px 10px;
     font-size: 15px;
   }
+
+  .new {
+    margin: 10px;
+    width: 300px;
+    height: 200px;
+}
+
+.newTitleImg {
+  margin-top: 15px;
+}
+
+.newPrice {
+  margin: 1px 15px 5px 15px;
+  font-size: 18px;
+}
+.newChange {
+  margin: 0px 15px 5px 15px;
+  font-size: 15px;
+}
+
+.newButton {
+  padding: 8px 5px;
+  margin: 0px 10px 20px 10px;
+  border-radius: 15px;
+}
+
+
 
   }

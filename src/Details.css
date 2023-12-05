@@ -1,6 +1,6 @@
 
 
-.coin {
+.coin1 {
     padding: 20px;
     border-radius: 20px;
     text-align: center;
@@ -8,8 +8,50 @@
     height: 200px;
     margin: 20px;
     font-size: 25px;
-    background: rgba(81, 150, 171, 0.3);
+    background-image: url('./imgs/name.jpg');
+    background-size: 300px;
     transition : 0.2s;
+    color: white;
+}
+
+.coin1:hover {
+    background-size: 310px;
+}
+
+.coin2 {
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    font-size: 25px;
+    background-image: url('./imgs/rank.jpg');
+    background-size: 300px;
+    transition : 0.2s;
+    color: white;
+}
+
+.coin2:hover {
+    background-size: 310px;
+}
+
+.coin3 {
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    width: 300px;
+    height: 200px;
+    margin: 20px;
+    font-size: 25px;
+    background-image: url('./imgs/price.jpg');
+    background-size: 300px;
+    transition : 0.2s;
+    color: white;
+}
+
+.coin3:hover {
+    background-size: 310px;
 }
 
 .coinTitle {
@@ -17,25 +59,28 @@
     padding: 5px;
     margin-top: 30px;
     margin-bottom: 20px;
-    background-color: #ea698b;
-    font-weight: 900;
-    color: white;
+    background-color: rgb(189, 83, 83);
 }
 .coinName {
-    color: aliceblue;
     font-size: 25px;
     margin: 25px;
+    font-weight: 900;
 
 }
 .coinRank {
     font-size: 25px;
-    color: aliceblue;
     margin: 25px;
+    font-weight: 900;
 }
 .coinPrice {
     font-size: 30px;
-    color: rgb(0, 255, 0);
-    margin: 25px;
+    margin: 20px 25px;
+    font-weight: 900;
+}
+
+.coinChangePrice {
+    font-size: 15px;
+    margin-top: -20px;
 }
 
 .SinglebuyTitle {
@@ -81,7 +126,7 @@
     margin-left: 15px;
     width: 500px;
     text-align: center;
-    background-color: #ea698b;
+    background-color: rgb(189, 83, 83);
 }
 
 .SinglepayInp {
@@ -168,10 +213,6 @@
 }
 
 @media only screen and (max-width: 700px) {
-    .coinPrice {
-        font-size: 18px;
-        color: rgb(0, 255, 13);
-    }
 
 
     .SinglebuyCard {

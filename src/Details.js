@@ -8,6 +8,7 @@ const Details = () => {
     const {name} = useParams()
     const {rank} = useParams()
     const {priceUsd} = useParams()
+    const {changePercent24Hr} = useParams()
 
     const [usdInp , setUsdInp] = useState(1)
     const [data , setData] = useState([])
@@ -45,17 +46,18 @@ const Details = () => {
                 justifyContent : "center",
                 marginTop : "50px"
         }} className="coinDetails">
-            <p className="coin" >
+            <p className="coin1" >
                 <p className="coinTitle">Name</p>
                 <p className="coinName">{name}</p>
             </p>
-            <p className="coin" >
+            <p className="coin2" >
             <p className="coinTitle">Rank</p>
                 <p className="coinRank">{rank}</p>
                 </p>
-            <p className="coin" >
+            <p className="coin3" >
             <p className="coinTitle">Price</p>
                 <p className="coinPrice">${Number(priceUsd).toFixed(4)}</p>
+                <p className="coinChangePrice">{Number(changePercent24Hr).toFixed(2)}%</p>
             </p>
         </div>
 
