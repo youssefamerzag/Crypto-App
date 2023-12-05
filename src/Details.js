@@ -48,16 +48,18 @@ const Details = () => {
         }} className="coinDetails">
             <p className="coin1" >
                 <p className="coinTitle">Name</p>
-                <p className="coinName">{name}</p>
+                <p className="bg-gray-600 bg-opacity-60 rounded-xl">{name}</p>
             </p>
             <p className="coin2" >
             <p className="coinTitle">Rank</p>
-                <p className="coinRank">{rank}</p>
+                <p className="bg-gray-600 bg-opacity-60 rounded-xl">{rank}</p>
                 </p>
             <p className="coin3" >
             <p className="coinTitle">Price</p>
-                <p className="coinPrice">${Number(priceUsd).toFixed(4)}</p>
-                <p className="coinChangePrice">{Number(changePercent24Hr).toFixed(2)}%</p>
+                <div className="bg-gray-600 bg-opacity-60 rounded-xl -mt-2">
+                    <p className="coinPrice">${Number(priceUsd).toFixed(4)}</p>
+                    <p className={`-m-5 text-xl ${changePercent24Hr >= 0.01 ? 'text-green-400' : 'text-red-400'} `}>{Number(changePercent24Hr).toFixed(2)}%</p>
+                </div>
             </p>
         </div>
 
@@ -78,7 +80,7 @@ const Details = () => {
                 <p className="TopTitle">{data[0].name}</p>
                 <p className="TopRank">#{data[0].rank}</p>
                 <p className="TopPrice">${Number(data[0].priceUsd).toFixed(3)}</p>
-                <p className="TopChange">{Number(data[0].changePercent24Hr).toFixed(2)}%</p>
+                <p className={`m-1 ${Number(data[0].changePercent24Hr).toFixed(2) >= 0.01 ? 'text-green-400' : 'text-red-400'  } `}>{Number(data[0].changePercent24Hr).toFixed(2)}%</p>
             </div>
             }
             {data.length > 0 &&
@@ -86,7 +88,7 @@ const Details = () => {
                 <p className="TopTitle">{data[1].name}</p>
                 <p className="TopRank">#{data[1].rank}</p>
                 <p className="TopPrice">${Number(data[1].priceUsd).toFixed(3)}</p>
-                <p className="TopChange">{Number(data[1].changePercent24Hr).toFixed(2)}%</p>
+                <p className={`m-1 ${Number(data[1].changePercent24Hr).toFixed(2) >= 0.01 ? 'text-green-400' : 'text-red-900' }`}>{Number(data[1].changePercent24Hr).toFixed(2)}%</p>
             </div>
             }
             {data.length > 0 &&
@@ -94,7 +96,7 @@ const Details = () => {
                 <p className="TopTitle">{data[2].name}</p>
                 <p className="TopRank">#{data[2].rank}</p>
                 <p className="TopPrice">${Number(data[2].priceUsd).toFixed(3)}</p>
-                <p className="TopChange">{Number(data[2].changePercent24Hr).toFixed(2)}%</p>
+                <p className={`m-1 ${Number(data[2].changePercent24Hr).toFixed(2) >= 0.01 ? 'text-green-300' : 'text-red-400' }`}>{Number(data[2].changePercent24Hr).toFixed(2)}%</p>
             </div>
             }
         </div>

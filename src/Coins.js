@@ -12,16 +12,7 @@ const Coins = () => {
 
     const [coinValue , setCoinValue] = useState(0)
     const [usdInp , setUsdInp] = useState(1)
-
     const percentecoin = useRef();
-
-    useEffect(() => {
-            if (data.changePercent24Hr !== undefined) {
-                if (data.changePercent24Hr.value >= 0.01) {
-                    percentecoin.current.style.color = 'red';
-                }
-            }
-    }, [data]);
     
     
     return (
@@ -30,11 +21,10 @@ const Coins = () => {
                 <p className="title" >Track the Cryptocurrency <p style={{color :'white'}}>Market with Real-Time Data</p></p>
                 <p className="paragraph">Explore the top cryptocurrencies by market cap and stay informed with real-time price charts, historical data, and market analysis.</p>
                 <button className="startedBtn" onClick={() => window.scrollTo({ top: 550, behavior: "smooth" })}>Get Started</button>
-                <img className="illustration" src="./imgs/crypto illustration.svg"></img>
+                <img className="illustration" src="./imgs/crypto illustration v2.svg"></img>
             </header>
 
             {/* most Populer coins */}
-
             <div className="mostPopuler">
                 <p style={{    textAlign: "center",fontSize : '30px' , color : "white" , fontWeight : '600' , margin : "30px"}}>Most Populer</p>
                 <div className="TopCoins">
@@ -67,7 +57,7 @@ const Coins = () => {
 
              {/* buy section */}
              <div className="buySection">
-                <img src="./imgs/wallet.png" className="buyImg"></img>
+                <img src="./imgs/wallet.svg" className="buyImg"></img>
                     <div className="buyCard">
                         <p className="buyTitle">Buy cryptocurrency</p>
                         <p className="buySectionTitle">You pay</p>
@@ -102,7 +92,7 @@ const Coins = () => {
                             <p className="newTitle" key={index}>{coin.name}</p>
                             </div>
                             <p className="newPrice">${Number(coin.priceUsd).toFixed(4)}</p>
-                            <p className="newChange" ref={percentecoin}>{Number(coin.changePercent24Hr).toFixed(2)}%</p>
+                            <p className={`text-center m-1 ${Number(coin.changePercent24Hr).toFixed(2) >= 0.01 ? 'text-green-400' : 'text-red-500'} `} ref={percentecoin}>{Number(coin.changePercent24Hr).toFixed(2)}%</p>
                             <Link className="newButton" to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}/${coin.changePercent24Hr}`}>Learn More</Link>
                         </div>
                     )}
