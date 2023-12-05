@@ -12,16 +12,7 @@ const Coins = () => {
 
     const [coinValue , setCoinValue] = useState(0)
     const [usdInp , setUsdInp] = useState(1)
-
     const percentecoin = useRef();
-
-    useEffect(() => {
-            if (data.changePercent24Hr !== undefined) {
-                if (data.changePercent24Hr.value >= 0.01) {
-                    percentecoin.current.style.color = 'red';
-                }
-            }
-    }, [data]);
     
     
     return (
@@ -34,7 +25,6 @@ const Coins = () => {
             </header>
 
             {/* most Populer coins */}
-
             <div className="mostPopuler">
                 <p style={{    textAlign: "center",fontSize : '30px' , color : "white" , fontWeight : '600' , margin : "30px"}}>Most Populer</p>
                 <div className="TopCoins">
@@ -103,7 +93,7 @@ const Coins = () => {
                             <p className="newTitle" key={index}>{coin.name}</p>
                             </div>
                             <p className="newPrice">${Number(coin.priceUsd).toFixed(4)}</p>
-                            <p className="newChange" ref={percentecoin}>{Number(coin.changePercent24Hr).toFixed(2)}%</p>
+                            <p className={`text-center m-1 ${Number(coin.changePercent24Hr).toFixed(2) >= 0.01 ? 'text-green-400' : 'text-red-500'} `} ref={percentecoin}>{Number(coin.changePercent24Hr).toFixed(2)}%</p>
                             <Link className="newButton" to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}/${coin.changePercent24Hr}`}>Learn More</Link>
                         </div>
                     )}
