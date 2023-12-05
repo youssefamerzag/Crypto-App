@@ -66,7 +66,6 @@ const Coins = () => {
             </div>
 
              {/* buy section */}
-
              <div className="buySection">
                 <img src="./imgs/wallet.png" className="buyImg"></img>
                     <div className="buyCard">
