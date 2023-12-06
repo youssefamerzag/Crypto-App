@@ -12,8 +12,8 @@ const Coins = () => {
 
     const [coinValue , setCoinValue] = useState(0)
     const [usdInp , setUsdInp] = useState(1)
+    const [coinName , setCoinName] = useState('')
     const percentecoin = useRef();
-    
     
     return (
         <div className="coinsApp">
@@ -33,7 +33,7 @@ const Coins = () => {
                 <p className="TopTitle">{data[0].name}</p>
                 <p className="TopRank">#{data[0].rank}</p>
                 <p className="TopPrice">${Number(data[0].priceUsd).toFixed(3)}</p>
-                <p className="TopChange">{Number(data[0].changePercent24Hr).toFixed(2)}%</p>
+                <p className={`${Number(data[0].changePercent24Hr).toFixed(2) >= 0.01} ? text-green-700  : text-red-500`} ref={percentecoin} >{Number(data[0].changePercent24Hr).toFixed(2)}%</p>
             </div>
             }
             {data.length > 0 &&
@@ -41,7 +41,7 @@ const Coins = () => {
                 <p className="TopTitle">{data[1].name}</p>
                 <p className="TopRank">#{data[1].rank}</p>
                 <p className="TopPrice">${Number(data[1].priceUsd).toFixed(3)}</p>
-                <p className="TopChange">{Number(data[1].changePercent24Hr).toFixed(2)}%</p>
+                <p className={`${Number(data[1].changePercent24Hr) >= 0.01} ? text-green-700 : text-red-500`}>{Number(data[1].changePercent24Hr).toFixed(2)}%</p>
             </div>
             }
             {data.length > 0 &&
@@ -49,16 +49,17 @@ const Coins = () => {
                 <p className="TopTitle">{data[2].name}</p>
                 <p className="TopRank">#{data[2].rank}</p>
                 <p className="TopPrice">${Number(data[2].priceUsd).toFixed(3)}</p>
-                <p className="TopChange">{Number(data[2].changePercent24Hr).toFixed(2)}%</p>
+                <p className={`${Number(data[0].changePercent24Hr).toFixed(2) >= 0.01} ? text-green-700  : text-red-500`}>{Number(data[2].changePercent24Hr).toFixed(2)}%</p>
             </div>
             }
         </div>
             </div>
 
              {/* buy section */}
-             <div className="buySection">
-                <img src="./imgs/wallet.svg" className="buyImg"></img>
-                    <div className="buyCard">
+
+            <div className="buySection">
+                <img src="./imgs/wallet.png" className="buyImg"></img>
+            <div className="buyCard">
                         <p className="buyTitle">Buy cryptocurrency</p>
                         <p className="buySectionTitle">You pay</p>
                         <div className="coinchoosing">
@@ -69,17 +70,19 @@ const Coins = () => {
                         </div>
                         <p className="buySectionTitle">You get</p>
                     <div className="coinchoosing">
-                            <select className="paySection" onChange={(e) => setCoinValue(e.target.value)}>
+                            <select className="paySection" onClick={(e) => setCoinValue(e.target.value)}>
                                 {data.map((coin , index) =>
-                                    <option className="buyOption" key={index} value={coin.priceUsd}>{coin.name}</option>
+                                    <option className="buyOption" key={index}value={coin.priceUsd}>{coin.name}</option>
                                 )}
                             </select>
-                            <input type="number" style={{color : "black"}} className="payInp" value={usdInp /coinValue}></input>
+                            <input type="number" style={{color : "black"}} placeholder="Choose" className="payInp" value={usdInp / coinValue}></input>
                         </div>
-                        <button className="buyButton">Buy and Instantly</button>
+                        <a className="buyButton" href="https://www.binance.com/en/price/">
+                            <button className='w-full'  >Buy and Instantly</button>
+                        </a>
                     </div>
-             </div>
-             <div className="allCoins">
+            </div>
+            <div className="allCoins">
                 <div className="coinSearchDiv">
                     <input className="coinSearch" onChange={(e) => setSearchInp(e.target.value)} placeholder="Search"/>
                 </div>
@@ -95,7 +98,7 @@ const Coins = () => {
                             <p className={`text-center m-1 ${Number(coin.changePercent24Hr).toFixed(2) >= 0.01 ? 'text-green-400' : 'text-red-500'} `} ref={percentecoin}>{Number(coin.changePercent24Hr).toFixed(2)}%</p>
                             <Link className="newButton" to={`/details/${coin.id}/${coin.name}/${coin.priceUsd}/${coin.rank}/${coin.changePercent24Hr}`}>Learn More</Link>
                         </div>
-                    )}
+                )}
             <p></p>
             </div>
         </div>

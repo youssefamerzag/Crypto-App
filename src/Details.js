@@ -57,7 +57,7 @@ const Details = () => {
             <p className="coin3" >
             <p className="coinTitle">Price</p>
                 <div className="bg-gray-600 bg-opacity-60 rounded-xl -mt-2">
-                    <p className="coinPrice">${Number(priceUsd).toFixed(4)}</p>
+                    <p className="coinPrice">${Number(priceUsd).toFixed(6)}</p>
                     <p className={`-m-5 text-xl ${changePercent24Hr >= 0.01 ? 'text-green-400' : 'text-red-400'} `}>{Number(changePercent24Hr).toFixed(2)}%</p>
                 </div>
             </p>
