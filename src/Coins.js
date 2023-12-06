@@ -56,9 +56,10 @@ const Coins = () => {
             </div>
 
              {/* buy section */}
+
             <div className="buySection">
                 <img src="./imgs/wallet.png" className="buyImg"></img>
-                    <div className="buyCard">
+            <div className="buyCard">
                         <p className="buyTitle">Buy cryptocurrency</p>
                         <p className="buySectionTitle">You pay</p>
                         <div className="coinchoosing">
