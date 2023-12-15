@@ -1,4 +1,10 @@
 
+.coinInfo {
+    backdrop-filter: blur(10px);
+    background: rgba(244, 244, 244, 0.174);
+    border-radius: 10px;
+}
+
 
 .coin1 {
     padding: 20px;
@@ -73,7 +79,7 @@
     font-weight: 900;
 }
 .coinPrice {
-    font-size: 30px;
+    font-size: 25px;
     margin: 20px 25px;
     font-weight: 900;
 }
@@ -103,11 +109,11 @@
 .SinglebuyCard {
     width: 600px;
     height: 400;
-    background: rgba(81, 150, 171, 0.3);
+    backdrop-filter: blur(15px);
+    background: rgba(81, 150, 171, 0.2);
     color: white;
     border-radius: 20px;
     padding: 30px;
-    
 }
 
 .SinglepayInp {

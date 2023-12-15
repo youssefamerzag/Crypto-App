@@ -8,6 +8,62 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
+  navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.05);
+    position: fixed;
+    margin-top: -120px;
+  }
+
+  navbar h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-left: 20px;
+  }
+
+  navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-right: 50px;
+  }
+
+  navbar li {
+    width: 100px;
+    padding: 18px 0px;
+    margin-top: 3px;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.2s;
+    font-weight: 700;
+    color: white;
+  }
+
+  navbar li:hover {
+    transition: 0.2s;
+    color: rgb(189, 83, 83);
+  }
+
+  navbar button {
+    background : rgb(189, 83, 83) ;
+    padding : 6px 13px;
+    border-radius : 5px;
+    margin-top : -8px ;
+    transition: 0.2s;
+  }
+
+  navbar button:hover {
+    transition: 0.2s;
+    background-color: white;
+  }
+
+
   header {
     margin: 120px;
     margin-left: 100px;
@@ -15,7 +71,7 @@ body {
 
   .startedBtn {
     background-color: rgb(189, 83, 83);
-    margin-top: 30px;
+    margin-top: 40px;
     border-radius: 50px;
     padding: 20px 60px;
     color: white;
@@ -34,10 +90,10 @@ body {
   }
 
   .illustration {
-    width: 550px;
+    width: 530px;
     display: flex;
     float: right;
-    margin-top: -350px;
+    margin-top: -310px;
   }
 
   .populerCoins {
@@ -124,7 +180,8 @@ body {
     background-color: aqua;
     padding: 40px;
     margin: 50px;
-    background: rgba(81, 150, 171, 0.3);
+    backdrop-filter: blur(15px);
+    background: rgba(81, 150, 171, 0.2);
     color: white;
     border-radius: 20px;
   }
@@ -184,6 +241,8 @@ body {
     background-color: #b796ff;
     border-top-right-radius: 50px ; 
     border-top-left-radius: 50px ; 
+    border-bottom-left-radius: 50px ; 
+    border-bottom-right-radius: 50px ; 
   }
 
   .coinSearchDiv {

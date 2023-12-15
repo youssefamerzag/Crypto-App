@@ -29,7 +29,7 @@ const Details = () => {
                     textDecoration: "none",
                     transition : "0.5s",
                     color : "white",
-                    background: "#ea698b",
+                    background: "rgb(189, 83, 83)",
                     fontSize : "15px",
                     transition : "0.5s",
                     fontWeight : "500"
@@ -48,15 +48,15 @@ const Details = () => {
         }} className="coinDetails">
             <p className="coin1" >
                 <p className="coinTitle">Name</p>
-                <p className="bg-gray-600 bg-opacity-60 rounded-xl">{name}</p>
+                <p className="coinInfo">{name}</p>
             </p>
             <p className="coin2" >
             <p className="coinTitle">Rank</p>
-                <p className="bg-gray-600 bg-opacity-60 rounded-xl">{rank}</p>
+                <p className="coinInfo">{rank}</p>
                 </p>
             <p className="coin3" >
             <p className="coinTitle">Price</p>
-                <div className="bg-gray-600 bg-opacity-60 rounded-xl -mt-2">
+                <div className="coinInfo">
                     <p className="coinPrice">${Number(priceUsd).toFixed(6)}</p>
                     <p className={`-m-5 text-xl ${changePercent24Hr >= 0.01 ? 'text-green-400' : 'text-red-400'} `}>{Number(changePercent24Hr).toFixed(2)}%</p>
                 </div>
