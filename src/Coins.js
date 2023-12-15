@@ -21,7 +21,7 @@ const Coins = () => {
     useEffect(() => {
         setTimeout(() => {
             setLoading(false)
-        }, 10);
+        }, 3000);
     } , [])
 
     return (
@@ -44,7 +44,6 @@ const Coins = () => {
                 <button className="startedBtn" onClick={() => window.scrollTo({ top: 420, behavior: "smooth" })}>Get Started</button>
                 <img className="illustration" src="./imgs/crypto illustration v2.svg"></img>
             </header>
-
             <div className="mostPopuler">
                 <p style={{ textAlign: "center", fontSize: '30px', color: "white", fontWeight: '600', margin: "30px" }}>Most Populer</p>
                 <div className="TopCoins">
@@ -74,19 +73,18 @@ const Coins = () => {
                     }
                 </div>
             </div>
-
             <div className="buySection">
                 <img src="./imgs/wallet.png" className="buyImg"></img>
-                <div className="buyCard">
-                    <p className="buyTitle">Buy cryptocurrency</p>
-                    <p className="buySectionTitle">You pay</p>
-                    <div className="coinchoosing">
-                        <select className="paySection">
-                            <option className="buyOption">USD</option>
-                        </select>
-                        <input style={{ color: "black" }} type="number" className="payInp" value={usdInp} onChange={(e) => setUsdInp(e.target.value)}></input>
-                    </div>
-                    <p className="buySectionTitle">You get</p>
+                    <div className="buyCard">
+                        <p className="buyTitle">Buy cryptocurrency</p>
+                        <p className="buySectionTitle">You pay</p>
+                        <div className="coinchoosing">
+                            <select className="paySection">
+                                    <option className="buyOption">USD</option>
+                            </select>
+                            <input style={{color : "black"}} type="number" className="payInp" value={usdInp} onChange={(e) => setUsdInp(e.target.value)}></input>
+                        </div>
+                        <p className="buySectionTitle">You get</p>
                     <div className="coinchoosing">
                         <select className="paySection" onClick={(e) => setCoinValue(e.target.value)}>
                             {data.map((coin, index) =>
