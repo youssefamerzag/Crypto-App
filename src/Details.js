@@ -17,6 +17,15 @@ const Details = () => {
         .then(Response => setData(Response.data.data))
     return(
     <div>
+        <nav>
+            <h1><Link to={'/'}>Cryptocurrency</Link></h1>
+            <ul>
+                <li onClick={ () => window.scroll({top : 400 , behavior : "smooth"})}>Buy crypto</li>
+                <li>Coins</li>
+            <li>Log In</li>
+            <li><button>Sign In</button></li>
+        </ul>
+        </nav>
         <a style={{
                     fontFamily: "'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;",
                     display: "flex",
@@ -24,7 +33,8 @@ const Details = () => {
                     width: "100px",
                     justifyContent : "center",
                     padding: "15px 80px",
-                    margin : "10px",
+                    marginTop : "80px",
+                    marginLeft : "10px",
                     borderRadius: "50px",
                     textDecoration: "none",
                     transition : "0.5s",

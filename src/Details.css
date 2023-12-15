@@ -1,4 +1,61 @@
 
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;  
+    align-items: center;  
+    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.05);
+    position: fixed;
+    margin-top: -80px;
+    z-index: 1;
+    }
+
+  nav h1 {
+    font-size: 25px;
+    font-weight: 700;
+    color: white;
+    margin-left: 20px;
+  }
+
+  nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-right: 50px;
+  }
+
+  nav li {
+    width: 100px;
+    padding: 10px 0px;
+    margin-top: 5px;
+    font-size: 15px;
+    text-align: center;
+    transition: 0.2s;
+    font-weight: 700;
+    color: white;
+  }
+
+  nav li:hover {
+    transition: 0.2s;
+    color: rgb(189, 83, 83);
+  }
+
+  nav button {
+    background : rgb(189, 83, 83) ;
+    padding : 6px 13px;
+    border-radius : 5px;
+    margin-top : -8px ;
+    transition: 0.2s;
+  }
+
+  nav button:hover {
+    transition: 0.2s;
+    background-color: white;
+  }
+
 .coinInfo {
     backdrop-filter: blur(10px);
     background: rgba(244, 244, 244, 0.174);

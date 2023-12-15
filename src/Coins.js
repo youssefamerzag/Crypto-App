@@ -30,7 +30,7 @@ const Coins = () => {
             {
                 <>
             <navbar>
-                <h1>bitcoina</h1>
+                <h1><Link to='/'>Cryptocurrency</Link></h1>
                 <ul>
                     <li onClick={ () => window.scroll({top : 900 , behavior : "smooth"})}>Buy crypto</li>
                     <li onClick={() => window.scroll({top : 1500 , behavior : 'smooth'})}>Coins</li>
@@ -103,9 +103,9 @@ const Coins = () => {
                     <input className="coinSearch" onChange={(e) => setSearchInp(e.target.value)} placeholder="Search" />
                 </div>
                 <div className="news" >
-                    {data.slice(0 ,showMore).filter(coin => {
+                    {data.slice(0 ,100).filter(coin => {
                         return searchInp.toLowerCase() === '' ? coin : coin.name.toLowerCase().includes(searchInp.toLowerCase());
-                    }).map((coin, index) =>
+                    }).slice(0 ,showMore).map((coin, index) =>
                         <div key={index} className="new">
                             <div className="newTitleImg">
                                 <img className="newImg" width="64" height="64" src={`https://img.icons8.com/external-black-fill-lafs/64/external-${coin.name}-cryptocurrency-black-fill-lafs.png`} />
@@ -117,7 +117,7 @@ const Coins = () => {
                         </div>
                     )}
                 </div>
-                <div style={{display : 'flex' , justifyContent : 'center' , marginTop : "40px" }}><button style={{textAlign : 'center' , padding : "2px 20px 0px 20px", borderRadius : "5px", background : "rgb(189, 83, 83)" , marginTop : "-40px", color : "white"}} onClick={() => setShowMore( showMore + 6)}>Load More</button></div>
+                <div style={{display : 'flex' , justifyContent : 'center' , marginTop : "40px" }}><button style={{textAlign : 'center' , padding : "2px 20px 0px 20px", borderRadius : "5px", background : "rgb(189, 83, 83)" , marginTop : "-40px", color : "white"}} onClick={() => setShowMore(showMore + 6)}>Load More</button></div>
             </div>
             </>}
         </div>

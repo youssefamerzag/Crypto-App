@@ -17,6 +17,7 @@ body {
     background-color: rgba(255, 255, 255, 0.05);
     position: fixed;
     margin-top: -120px;
+    z-index: 1;
   }
 
   navbar h1 {
@@ -36,8 +37,8 @@ body {
 
   navbar li {
     width: 100px;
-    padding: 18px 0px;
-    margin-top: 3px;
+    padding: 10px 0px;
+    margin-top: 5px;
     font-size: 15px;
     text-align: center;
     transition: 0.2s;
