@@ -60,6 +60,7 @@ nav {
     backdrop-filter: blur(10px);
     background: rgba(244, 244, 244, 0.174);
     border-radius: 10px;
+    text-shadow: 1px 1px 2px black;
 }
 
 

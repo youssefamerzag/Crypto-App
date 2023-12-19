@@ -16,7 +16,7 @@ const Coins = () => {
     const [coinName, setCoinName] = useState('')
     const percentecoin = useRef();
     const [loading , setLoading] = useState(true)
-    const [showMore , setShowMore] = useState(6)
+    const [showMore , setShowMore] = useState(8)
 
     useEffect(() => {
         setTimeout(() => {
@@ -117,7 +117,7 @@ const Coins = () => {
                         </div>
                     )}
                 </div>
-                <div style={{display : 'flex' , justifyContent : 'center' , marginTop : "40px" }}><button style={{textAlign : 'center' , padding : "2px 20px 0px 20px", borderRadius : "5px", background : "rgb(189, 83, 83)" , marginTop : "-40px", color : "white"}} onClick={() => setShowMore(showMore + 6)}>Load More</button></div>
+                <div style={{display : 'flex' , justifyContent : 'center' , marginTop : "40px" }}><button style={{textAlign : 'center' , padding : "2px 20px 0px 20px", borderRadius : "5px", background : "rgb(189, 83, 83)" , marginTop : "-40px", color : "white"}} onClick={() => setShowMore(showMore + 8)}>Load More</button></div>
             </div>
             </>}
         </div>

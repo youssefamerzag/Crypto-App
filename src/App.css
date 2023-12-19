@@ -331,7 +331,7 @@ body {
     box-shadow: #9882ac 0px 0px 10px;
   }
   
-  @media only screen and (max-width: 1245px) {
+  @media only screen and (max-width: 800px) {
     header {
       display: flex;
       flex-direction: column;
